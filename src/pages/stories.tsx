@@ -10,7 +10,7 @@ const head = (
   <>
     <title>Stories | ink!</title>
     <meta name="description" content="Read success stories and case studies from the ink! community." />
-    <meta name="keywords" content="stories, ink!, ecosystem, case studies" />
+    <meta name="keywords" content="stories, ecosystem, case studies, dApp, examples" />
     <meta name="author" content="ink! Alliance" />
     <meta property="og:title" content="Stories | ink!" />
     <meta property="og:description" content="Read success stories and case studies from the ink! community." />

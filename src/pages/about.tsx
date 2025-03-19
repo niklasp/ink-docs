@@ -13,7 +13,7 @@ const head = (
   <>
     <title>About | ink!</title>
     <meta name="description" content="Learn about ink!, its history, and its community-driven development." />
-    <meta name="keywords" content="about, history, community" />
+    <meta name="keywords" content="ink! Alliance, Use Ink, Parity Technologies, PolkaVM, Polkadot" />
     <meta name="author" content="ink! Alliance" />
     <meta property="og:title" content="About | ink!" />
     <meta property="og:description" content="Learn about ink!, its history, and its community-driven development." />

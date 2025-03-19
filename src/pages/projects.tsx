@@ -8,7 +8,7 @@ const head = (
   <>
     <title>Projects | ink!</title>
     <meta name="description" content="Explore projects built with ink! and their impact on the ecosystem." />
-    <meta name="keywords" content="chains, interoperability, rollups, Polkadot" />
+    <meta name="keywords" content="chains, interoperability, rollups, Polkadot, parachain" />
     <meta name="author" content="ink! Alliance" />
     <meta property="og:title" content="Projects | ink!" />
     <meta property="og:description" content="Explore projects built with ink! and their impact on the ecosystem." />

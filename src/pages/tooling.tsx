@@ -5,7 +5,7 @@ const head = (
   <>
     <title>Tooling | ink!</title>
     <meta name="description" content="Discover tools and libraries for developing with ink!." />
-    <meta name="keywords" content="tooling, ink!, ecosystem, resources, libraries" />
+    <meta name="keywords" content="tooling, IDE, frontend, developer, libraries" />
     <meta name="author" content="ink! Alliance" />
     <meta property="og:title" content="Tooling | ink!" />
     <meta property="og:description" content="Discover tools and libraries for developing with ink!." />
