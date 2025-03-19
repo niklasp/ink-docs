@@ -6,7 +6,7 @@ const head = (
     <title>Tooling | ink!</title>
     <meta name="description" content="Discover tools and libraries for developing with ink!." />
     <meta name="keywords" content="tooling, ink!, ecosystem, resources, libraries" />
-    <meta name="author" content="ink! alliance" />
+    <meta name="author" content="ink! Alliance" />
     <meta property="og:title" content="Tooling | ink!" />
     <meta property="og:description" content="Discover tools and libraries for developing with ink!." />
     <meta property="og:image" content="https://use-ink.com/img/og-image.png" />
