@@ -1,12 +1,12 @@
 ---
-title: Smart Contracts in Polkadot
+title: Smart Contracts vs. Rollups
 hide_title: true
 slug: /smart-contracts-polkadot
 ---
 
 ![Polkadot Title Picture](/img/title/polkadot.svg)
 
-# Smart Contracts in Polkadot
+# Smart Contracts vs. Rollups
 
 One of the first questions we typically get when somebody learns about Substrate, Polkadot, or Kusama is when to develop a parachain vs. when to develop a smart contract.
 

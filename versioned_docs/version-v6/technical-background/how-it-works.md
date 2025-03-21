@@ -1,12 +1,12 @@
 ---
-title: How it Works – Substrate
+title: Polkadot SDK
 hide_title: true
 slug: /how-it-works
 ---
 
 ![Substrate Title Picture](/img/title/substrate.svg)
 
-# How it Works – Substrate
+# Polkadot SDK
 
 ink! is a programming language for smart contracts; blockchains built with [the Substrate framework](http://substrate.io)
 can choose from a number of smart contract languages which one(s) they want to support.
