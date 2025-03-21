@@ -16,8 +16,8 @@ There are a few approaches to performing these cross-contract calls in ink!:
 1. Builders (i.e `CreateBuilder` and `CallBuilder`)
 
 Contract references can only be used for cross-contract calls to other ink! contracts.
-Builders can be used to issue cross-contract calls to any Wasm contract, such as those
-written in ink!, Solang, or ask!.
+Builders can be used to issue cross-contract calls to any RISC-V contract, such as those
+written in ink! or Solidity.
 
 ## Contract References
 

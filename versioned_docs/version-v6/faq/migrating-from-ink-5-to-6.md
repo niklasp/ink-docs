@@ -113,6 +113,9 @@ The relevant PR is [#2313](https://github.com/use-ink/ink/pull/2313).
 
 From ink! 6.0 on only these attributes are allowed in `#[cfg(…)]`: - `test` - `feature` (without `std`) - `any` - `not` - `all`
 
+### Metadata
+
+The field `source.wasm` was renamed to `source.contract_binary`.
 
 ### Types
 

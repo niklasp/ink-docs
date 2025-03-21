@@ -6,6 +6,8 @@ slug: /background/ink-vs-solidity
 
 ![Solidity Title Picture](/img/title/solidity.svg)
 
+TODO re-read in particular because of our migration to RISC-V
+
 # ink! vs. Solidity
 
 The following table gives a brief comparison of features between ink! and Solidity:

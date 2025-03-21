@@ -33,11 +33,14 @@ Quickly check that it compiles, and the trivial tests pass with:
 cargo test
 ```
 
-Also check that you can build the Wasm file by running:
+Also check that you can build the contract by running:
 
 ```bash
 cargo contract build
 ```
+
+`cargo test` builds the contract for `std`, `cargo contract build` for an 
+on-chain deployment (`no_std` with a RISC-V target).
 
 If everything looks good, then we are ready to start programming!
 

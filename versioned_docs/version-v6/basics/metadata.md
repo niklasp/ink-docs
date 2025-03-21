@@ -21,13 +21,13 @@ The metadata can be found in your contract's target directory under the name
 :::note
 
 The metadata is also contained in your `<contract-name>.contract` file. The difference is
-that the `.contract` file also contains the Wasm binary of your contract.
+that the `.contract` file also contains the binary of your contract (under `source.contract_binary`).
 
 :::
 
 ## `<contract-name>.json`
 The metadata is defined by the following **required** keys:
-- `source`: Information about the contract's Wasm code.
+- `source`: Information about the contract's binary.
 - `contract`: Metadata about the contract.
 - `abi`: Raw JSON of the contract's abi metadata, generated during contract compilation.
 
@@ -68,12 +68,12 @@ The following sections will dive deeper into how these sections are made up.
 This object contains information about how the contract was built.
 
 It consists of the following **required** keys:
-- `hash`: The hash of the contract's Wasm code.
+- `hash`: The hash of the contract's binary.
 - `language`: The language used to write the contract.
 - `compiler`: The compiler used to compile the contract.
 
 It may _optionally_ include the following keys:
-- `wasm`: The actual Wasm code of the contract, for optionally bundling the code with the metadata.
+- `contract_binary`: The actual binary code of the contract, for optionally bundling the code with the metadata.
 - `build_info`: Extra information about the environment in which the contract was built.
 
 ```json
