@@ -36,10 +36,6 @@ There are several levels of abstraction where you can start your journey creatin
 
 + [`inkathon`](https://github.com/scio-labs/inkathon) **(recommended)**: Full Stack web app template using the popular full stack template `Nextjs`. Itself is using `useInkathon`. The fastest way to get up and running with a smart contract and a corresponding web app.
 
-### Examples
-
-For inspiration how to get started building your full stack dApp. Make sure to visit our [Smart Contracts Examples section](../examples/contracts.md) or [repository directly](https://github.com/use-ink/ink-examples). These examples not only offer the smart contract code but also have an accompanied frontend project. Checkout the `README.md` for details how to setup and run these frontend examples.
-
 ## Other Languages
 
 Of course the browser and JavaScript should not be the one and only platform for smart contract frontends. It's just the most mature for smart contract frontend tooling.
