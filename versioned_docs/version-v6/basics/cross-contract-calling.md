@@ -135,7 +135,7 @@ pub fn flip_and_get(&mut self) -> bool {
 
 #### Uploading `OtherContract`
 
-You will need the [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node)
+You will need the [`ink-node`](https://github.com/use-ink/ink-node)
 running in the background for the next steps.
 
 We can upload `OtherContract` using `cargo-contract` as follows:

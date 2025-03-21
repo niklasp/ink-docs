@@ -78,7 +78,7 @@ repository acts as the basic template for a generic Cosmos node. With the additi
 In terms of Substrate, `substrate-node-template` is a basic generic template of a node.
 Similar to `x/wasm`, [`pallet-contracts`](https://github.com/paritytech/substrate/tree/master/frame/contracts)
 is the module that adds WebAssembly smart contract functionality to the chain. Parity
-provides the [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node),
+provides the [ink-node](https://github.com/use-ink/ink-node),
 which is analogous to `wasmd` - a basic template node for smart contract development.
 
 ## Testnets
@@ -88,7 +88,7 @@ For CosmWasm development and on-chain testing, `wasmd` can be operated as a loca
 
 ink! contracts can be deployed on a few different options:
 
-- Locally, on a single or multiple node setup of [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node).
+- Locally, on a single or multiple node setup of [`ink-node`](https://github.com/use-ink/ink-node).
 - [Contracts on Rococo Parachain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/explorer),
   which is connected to the [Rococo relay chain test network](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer).
 - [Astar Network’s Shibuya testnet](https://docs.astar.network/docs/build/introduction/astar_family/#shibuya-substrate).
@@ -102,7 +102,7 @@ The first step in CosmWasm development is to
 namely Rust, the WebAssembly target, `cargo-generate` and `cargo-run-script`.
 
 For ink! you can also find [a setup guide](../getting-started/setup.md) which will help you
-with dependencies, namely Rust, `cargo-contract` and `substrate-contracts-node`.
+with dependencies, namely Rust, `cargo-contract` and `ink-node`.
 
 ### Compile and Test
 

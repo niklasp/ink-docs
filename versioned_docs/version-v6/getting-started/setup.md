@@ -53,9 +53,9 @@ Please see the installation instructions in the `cargo-contract` repository [her
 
 If everything worked, `cargo contract --help` should show you the above list of available commands.
 
-## Installing `substrate-contracts-node`
+## Installing `ink-node`
 
-The [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) is
+The [ink-node](https://github.com/use-ink/ink-node) is
 a simple Substrate blockchain which is configured to include the Substrate module for
 smart contract functionality – the `contracts` pallet (see [How it Works](../intro/how-it-works.md) for more).
 It's a comfortable option if you want to get a quickstart.
@@ -64,7 +64,7 @@ There are two ways of installing the node:
 
 ### (1) Download the Binary
 This is the recommended method, you can
-[download a binary from our releases page](https://github.com/paritytech/substrate-contracts-node/releases)
+[download a binary from our releases page](https://github.com/use-ink/ink-node/releases)
 (Linux and Mac). 
 
 ### (2) Build it yourself

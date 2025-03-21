@@ -91,7 +91,7 @@ an additional field with the hex-encoded Wasm bytecode of your contract:
 }
 ```
 
-In the next section we will start a [Substrate Smart Contracts node](https://github.com/paritytech/substrate-contracts-node)
+In the next section we will start a [Substrate Smart Contracts node](https://github.com/use-ink/ink-node)
 and configure the [Contracts UI](https://github.com/use-ink/contracts-ui) to interact with it.
 
 ## Debug vs. Release Build
