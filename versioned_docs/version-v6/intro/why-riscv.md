@@ -4,7 +4,9 @@ hide_title: true
 slug: /why-riscv
 ---
 
-<img src="/img/title/ink!-6.0.svg" title="RISC-V" className="titlePic"  />
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<img src={useBaseUrl('/img/title/polkadot-riscv.svg')} title="RISC-V" className="titlePic"  />
 
 ## Why RISC-V for Smart Contracts?
 
