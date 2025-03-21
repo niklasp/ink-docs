@@ -12,7 +12,7 @@ ink! is a programming language for smart contracts; blockchains built with [the 
 can choose from a number of smart contract languages which one(s) they want to support.
 ink! is one of them. It is an opinionated language that we have built by extending the popular Rust programming language with functionality needed to make it smart contract compatible.
 
-## How does ink! tie into Substrate?
+## How does ink! tie into Polkadot SDK?
 
 [Substrate](https://substrate.io) is a framework for building blockchains – those can be standalone blockchains or blockchains connected to [Kusama](http://kusama.network) or [Polkadot](http://polkadot.network), so called _parachains_. Substrate contains a number of modules, in Substrate terminology those are called _pallets_. Substrate comes with a set of pallets for many requirements modern blockchains typically have – staking, fungible tokens, non-fungible tokens, governance, etc.
 

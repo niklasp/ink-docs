@@ -97,8 +97,8 @@
     "Technical Background": [
       "technical-background/why-rust",
       "technical-background/why-riscv",
-      "technical-background/polkadot",
-      "technical-background/how-it-works",
+      "technical-background/contracts-vs-rollups",
+      "technical-background/polkadot-sdk",
       "technical-background/ink-vs-solidity",
       "technical-background/ink-vs-cosmwasm",
       "technical-background/migrate-to-parachain"
