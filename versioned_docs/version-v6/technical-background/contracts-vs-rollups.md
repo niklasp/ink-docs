@@ -1,7 +1,7 @@
 ---
 title: Smart Contracts vs. Rollups
 hide_title: true
-slug: /smart-contracts-polkadot
+slug: /background/smart-contracts-vs-polkadot-rollups
 ---
 
 ![Polkadot Title Picture](/img/title/polkadot.svg)

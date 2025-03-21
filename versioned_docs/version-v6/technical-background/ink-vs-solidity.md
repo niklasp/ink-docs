@@ -1,7 +1,7 @@
 ---
 title: ink! vs. Solidity
 hide_title: true
-slug: /ink-vs-solidity
+slug: /background/ink-vs-solidity
 ---
 
 ![Solidity Title Picture](/img/title/solidity.svg)

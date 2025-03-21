@@ -1,14 +1,14 @@
 ---
-title: Why RISC-V for Smart Contracts?
+title: Why RISC-V and PolkaVM for Smart Contracts?
 hide_title: true
-slug: /why-riscv
+slug: /background/why-riscv-and-polkavm-for-smart-contracts
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/title/polkadot-riscv.svg')} title="RISC-V" className="titlePic"  />
 
-## 🧑‍🔬 Why RISC-V for Smart Contracts?
+## 🤔 Shortcomings of WebAssembly for Smart Contracts
 
 From ink! v1 to v5, the execution platform was Substrate's smart contracts
 module [`pallet-contracts`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/contracts/).
@@ -23,6 +23,8 @@ for smart contract execution. Some of those investigations are
 persisted in the Polkadot Forum. The forum post on [the eBPF investigation](https://forum.polkadot.network/t/ebpf-contracts-hackathon/1084)
 (eBPF is used in Solana) highlights some shortcomings of WebAssembly for smart contracts.
 
+## 🧑‍🔬 RISC-V + PolkaVM 
+
 During 2023, Parity core developer Jan Bujak ([@koute](https://github.com/koute)) did another
 exploration on alternatives for WebAssembly. [His forum post](https://forum.polkadot.network/t/exploring-alternatives-to-wasm-for-smart-contracts/2434)
 gives a great overview on how he landed at RISC-V and its potential.
@@ -35,7 +37,7 @@ good and got community enthusiasm started.
 For blockchains a very fast performance correlates with transaction throughput
 and transaction costs, which implies improved scalability and reduced costs for users.
 
-## 🤝 RISC-V + `pallet-revive` 
+## 🤝 `pallet-revive`
 
 Parity in late 2024 forked Substrate's `pallet-contracts` into a new project called
 [`pallet-revive`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/revive).
@@ -68,7 +70,7 @@ At the time of writing, `pallet-revive` is deployed to the Polkadot testnet West
 A launch on Polkadot's canary network Kusama is targeted for early Q2/25.
 The Polkadot launch is targeted for Q3/25.
 
-## 🙌 Migrating ink! to RISC-V + `pallet-revive`
+## 🙌 Migrating ink! to RISC-V + PolkaVM + `pallet-revive`
 
 `pallet-revive` and RISC-V are seen as the future of smart contracts in the Polkadot
 ecosystem. We agree with that vision and are excited to work on making the ink! stack

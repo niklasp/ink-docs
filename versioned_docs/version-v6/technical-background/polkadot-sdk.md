@@ -1,7 +1,7 @@
 ---
 title: Polkadot SDK
 hide_title: true
-slug: /how-it-works
+slug: /background/polkadot-sdk
 ---
 
 ![Polkadot SDK Title Picture](/img/title/polkadot.svg)

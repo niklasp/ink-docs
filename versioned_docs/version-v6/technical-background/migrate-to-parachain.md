@@ -1,7 +1,7 @@
 ---
 title: Migrate an ink! contract to a Rollup
 hide_title: true
-slug: /migrate-ink-contracts-to-polkadot-frame-parachain
+slug: /background/migrate-ink-contracts-to-polkadot-frame-parachain-rollup
 ---
 
 ![Polkadot Title Picture](/img/title/polkadot.svg)

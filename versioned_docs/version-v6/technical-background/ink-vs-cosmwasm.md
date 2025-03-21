@@ -1,6 +1,6 @@
 ---
 title: ink! vs. CosmWasm
-slug: /ink-vs-cosmwasm
+slug: /background/ink-vs-cosmwasm
 hide_title: true
 ---
 
