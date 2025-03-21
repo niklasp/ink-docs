@@ -95,13 +95,13 @@
       "standards/overview"
     ],
     "Technical Background": [
-      "intro/why-rust",
-      "intro/why-riscv",
-      "intro/polkadot",
-      "intro/how-it-works",
-      "intro/ink-vs-solidity",
-      "intro/ink-vs-cosmwasm",
-      "intro/migrate-to-parachain"
+      "technical-background/why-rust",
+      "technical-background/why-riscv",
+      "technical-background/polkadot",
+      "technical-background/how-it-works",
+      "technical-background/ink-vs-solidity",
+      "technical-background/ink-vs-cosmwasm",
+      "technical-background/migrate-to-parachain"
     ],
     "FAQ": [
       "faq/faq",
