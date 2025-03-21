@@ -8,6 +8,8 @@ hide_title: true
 
 # Overview
 
+TODO @peterwht read this page and see what's still up to date.
+
 Now after you [wrote](../getting-started/creating.md), [compiled](../getting-started/compiling.md) and [deployed your smart contract](../getting-started/deploying.md), it is time to craft a user experience around it.
 
 This experience can take many shapes from mobile app to interactive terminal applications. In this section we are focusing on the most prominent shape in web3 right now, web apps.
