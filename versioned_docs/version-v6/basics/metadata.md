@@ -127,7 +127,7 @@ see [here](https://github.com/use-ink/cargo-contract/blob/30ba1ec545d01c0479fe47
 This is the specification of the contract.
 
 Unlike the previous metadata sections the structure of the object stored here is not
-defined. Instead, it is up to each programming language (e.g. ink!, ask!, Solidity) to
+defined. Instead, it is up to each programming language (e.g. ink! or Solidity) to
 define their own metadata format which will then be stored here.
 
 In this document we will focus on the ink! ABI.
