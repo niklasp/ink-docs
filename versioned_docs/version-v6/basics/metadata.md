@@ -148,7 +148,7 @@ The ink! metadata consists of the following **required** sections
 
 :::info
 
-If you're interested in the code reference from `ink!`
+If you're interested in the code reference from ink!
 see [here](https://github.com/use-ink/ink/blob/c8aa3ee41112b327d4f3cb3959f188945c8ccace/crates/metadata/src/lib.rs#L90).
 
 :::
