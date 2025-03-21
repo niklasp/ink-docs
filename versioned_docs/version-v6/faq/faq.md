@@ -41,27 +41,6 @@ So please don't make poor Squink cry having to read !ink, ink, Ink!, or Ink.
 
 ### What's ink!'s relationship to Substrate/Polkadot?
 
-- Substrate is a modular framework to build decentralized applications on top of blockchain technology.
-- Polkadot is a layer-0 blockchain built using Substrate that allows to orchestrate an entire
-fleet of other blockchains to join forces and communicate with each other.
-- Blockchains built with Substrate can include the so-called `pallet-contracts` module in order to
-allow instantiating and executing smart contracts.
-
-ink! was built to allow users to write smart contracts in Rust targeting blockchains built by
-Substrate that have the aforementioned `pallet-contracts` included.
-
-While ink! is currently the most advanced smart contract language targeting Substrate blockchains it is
-not the only possible choice for users. There is also a Solidity to Wasm compiler called Solang that also
-allows to target Substrate chains and there are other languages in plan and discovery phase for the same
-purpose.
-
-On the Substrate side the same is true for the `pallet-contracts`. It is just a module that defines
-the basic set of features required for executing smart contracts on the blockchain that includes it.
-However, it is not necessarily the only solution to do exactly that. There is also the `evm-pallet`
-to run smart contracts targeting the EVM as well as the experimental `actors-pallet` that allows to
-execute smart contracts written in the actor style programming model.
-Over time the Substrate community might come up with yet other pallets for smart contracts execution.
-
 Please see our page [Polkadot SDK](../background/polkadot-sdk.md) for more information.
 
 ### How to call other smart contracts on the same blockchain?
@@ -100,20 +79,20 @@ Detailed documentation is found in [the Rust docs](https://docs.rs/ink_macro/5.0
 for the `#[ink(contract)]` macro. It allows you to specify your environment a la
 `#[ink::contract(env = MyEnvironment)]`.
 
-### What does the `#![cfg_attr(not(feature = "std"), no_std)]` at the beginning of each contract mean?
+### What does the `#![cfg_attr(not(feature = "std"), no_std, no_main)]` at the beginning of each contract mean?
 
 The `#[cfg(..)]` or `#[cfg_attr(..)]` annotations are how Rust does conditional compilation.
 
 ink! smart contracts can be compiled in two different modes.
 
-Through `#![cfg_attr(not(feature = "std"), no_std)]` an ink! smart contract tells the Rust compiler
+Through `#![cfg_attr(not(feature = "std"), no_std, no_main)]` an ink! smart contract tells the Rust compiler
 in which mode they are being compiled. This also plays a significant role in how ink! generates
 the smart contract code.
 
 The two modes are as follows:
 
-1. Wasm mode: This is the mode chosen when compiling an ink! smart contract for deployment on a blockchain.
-   The resulting binary is a `.wasm` file and as such it is not possible to use certain parts of Rust's standard
+1. On-chain mode: This is the mode chosen when compiling an ink! smart contract for deployment on a blockchain.
+   The resulting binary is a `.polkavm` file and as such it is not possible to use certain parts of Rust's standard
    library.
 2. Off-chain mode: This is the mode chosen when trying to test an ink! smart contract using the off-chain
    environment. Off-chain environment testing is very useful to check if certain ink! constructors or messages
@@ -125,7 +104,7 @@ The two modes are as follows:
 Being written in Rust, ink! can provide compile-time overflow/underflow safety. Using a Rust compiler configuration, you can specify whether you want to support overflowing math, or if you want contract execution to panic when overflows occur. No need to continually import "Safe Math" libraries, although Rust also provides [integrated checked, wrapped, and saturated math functions](https://doc.rust-lang.org/std/primitive.u32.html).
 
 :::note
-There are some known issues regarding functionality of compiler level overflow checks and the resulting size of the Wasm blob. This feature may change or be iterated on in the future.
+There are some known issues regarding functionality of compiler level overflow checks and the resulting size of the binary blob. This feature may change or be iterated on in the future.
 :::
 
 ### What is the difference between memory and storage?
@@ -157,17 +136,17 @@ Rust's standard library consists of three different layers:
    ink! smart contracts allow authors to use Rust's `alloc` crate.
    By default ink! authors use definitions from the `alloc` crate through `ink::prelude` crate.
 
-3. `std` library is what people generally call Rust's standard library.
+   3. `std` library is what people generally call Rust's standard library.
 
-   > The Rust Standard Library is the foundation of portable Rust software, a set of minimal and battle-tested shared abstractions for the broader Rust ecosystem.
+   >    The Rust Standard Library is the foundation of portable Rust software, a set of minimal and battle-tested shared abstractions for the broader Rust ecosystem.
 
-   It requires several operating system capabilities in order to work correctly such as input and
-   output systems for files, networking etc.
+      It requires several operating system capabilities in order to work correctly such as input and
+      output systems for files, networking etc.
 
-   Since the Wasm (a.k.a. `wasm32-unknown-unknown`) compilation target does not support Rust's
-   standard library ink! authors cannot use it either for their own purposes. Instead the `pallet-contracts`
-   tries to provide some common functionality that would otherwise be missing for common smart contract
-   operations.
+      Since our RISC-V compilation target does not support Rust's
+      standard library ink! authors cannot use it either for their own purposes. Instead the [`pallet-revive`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/revive)
+      tries to provide some common functionality that would otherwise be missing for common smart contract
+      operations.
 
 ### How do I hash a value?
 
@@ -177,7 +156,7 @@ can view the complete list [here](https://docs.rs/ink_env/5.0.0/ink_env/hash/tra
 
 If you have the urgent need for another crypto hash you could introduce it through
 [Chain Extensions](../macros-attributes/chain-extension.md)
-or make a proposal to include it into the default set of the `pallet-contracts`.
+or make a proposal to include it into the default set of the `pallet-revive`.
 
 Using one of the built-in crypto hashes can be done as explained here:
 * [`self.env().hash_bytes()`](https://docs.rs/ink_env/5.0.0/ink_env/fn.hash_bytes.html)
@@ -312,7 +291,7 @@ Warning: This chain does not yet support checking for compatibility of your cont
 ```
 
 This warning appears when the chain that you are targeting (via the `--url` cli flag)
-does not contain a version of `pallet-contracts` that does support type comparison.
+does not contain a version of `pallet-revive` that does support type comparison.
 Type comparison is a feature that we introduced, it means we check that the environmental
 types of your contract are equivalent to the environmental types of the chain that you are
 targeting.

@@ -200,7 +200,7 @@ define any events then the `events` key would contain an empty array `[]`.
 
 The `lang_error` field was introduced as part of ink! 4.0. This represents an error which
 comes from the smart contracting language itself, and not the contract nor the underlying
-environment (e.g `pallet-contracts`).
+environment (i.e. `pallet-revive`).
 
 All ink! messages and constructors now return a `Result` which uses this as the `Error`
 variant (see the [`LangError`](https://docs.rs/ink/5.0.0/ink/enum.LangError.html) docs for more).

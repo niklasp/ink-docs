@@ -345,11 +345,9 @@ for more details on proper error handling.
 :::tip
 
 Because the `CallBuilder` requires only a contract's `AccountId` and message `selector`,
-we can call Solidity contracts compiled using the [Solang](https://github.com/hyperledger/solang)
-compiler and deployed to a chain that supports the `pallet-contracts`.
+we can call Solidity contracts compiled using [Parity's revive compiler](https://github.com/paritytech/revive)
+compiler and deployed to a chain that supports the `pallet-revive`.
+
+TODO update link below to fitting example in the `ink-examples` repo
 See [here](https://github.com/xermicus/call_solidity) for an example of how to do that.
-
-The reverse, calls from Solidity to ink!, are **not** supported by Solang, but there are
-plans to implement this in the future.
-
 :::
