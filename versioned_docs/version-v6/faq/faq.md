@@ -62,7 +62,7 @@ to run smart contracts targeting the EVM as well as the experimental `actors-pal
 execute smart contracts written in the actor style programming model.
 Over time the Substrate community might come up with yet other pallets for smart contracts execution.
 
-Please see our page [How it Works – Substrate](../intro/how-it-works.md) for more information.
+Please see our page [Polkadot SDK](../background/polkadot-sdk.md) for more information.
 
 ### How to call other smart contracts on the same blockchain?
 
@@ -171,7 +171,7 @@ Rust's standard library consists of three different layers:
 
 ### How do I hash a value?
 
-A number of crypto hashes are built into the [pallet-contracts](../intro/how-it-works.md) and
+A number of crypto hashes are built into [pallet-revive](../background/polkadot-sdk.md) and
 therefore very efficient to use. We currently support a handful of those, you
 can view the complete list [here](https://docs.rs/ink_env/5.0.0/ink_env/hash/trait.CryptoHash.html).
 

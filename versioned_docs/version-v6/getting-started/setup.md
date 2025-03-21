@@ -61,7 +61,7 @@ If everything worked, `cargo contract --help` should show you the above list of 
 
 The [ink-node](https://github.com/use-ink/ink-node) is
 a simple Substrate blockchain which is configured to include the Polkadot SDK module for
-smart contract functionality – the `pallet-revive` (see [Polkadot SDK](../background/polkadot-sdk) for more).
+smart contract functionality – the `pallet-revive` (see [Polkadot SDK](../background/polkadot-sdk.md) for more).
 It's a comfortable option if you want to get a quickstart.
 
 There are two ways of installing the node:
