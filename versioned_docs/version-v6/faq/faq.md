@@ -114,10 +114,6 @@ used by a contract instance. Memory is temporary and only lasts until the contra
 execution is done, while storage is persistent and lasts over many contract executions.
 The contract storage is built on top of the runtime storage, and access is considered to be slow.
 
-### How do I print something to the console from the runtime?
-
-Please see our page on [Contract Debugging](../testing/debugging.md).
-
 ### Why is Rust's standard library (stdlib) not available in ink!?
 
 Rust's standard library consists of three different layers:

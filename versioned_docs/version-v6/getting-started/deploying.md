@@ -1,5 +1,5 @@
 ---
-title: Deploy Your Contract
+title: Deploy your contract
 slug: /getting-started/deploy-your-contract
 hide_title: true
 ---

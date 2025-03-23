@@ -1,5 +1,5 @@
 ---
-title: Call Your Contract
+title: Call your contract
 slug: /getting-started/calling-your-contract
 hide_title: true
 ---
