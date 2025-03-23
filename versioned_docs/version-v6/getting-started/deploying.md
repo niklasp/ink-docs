@@ -87,6 +87,6 @@ Contracts can be deployed via the command-line as well. With `cargo-contract`
 it's just a simple sequence of:
 
 ```bash
-cargo contract build
-cargo contract instantiate --suri //Alice --args true
+$ cargo contract build
+$ cargo contract instantiate --suri //Alice --args true
 ```

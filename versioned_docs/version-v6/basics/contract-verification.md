@@ -25,7 +25,7 @@ Contract verification tools are available from `cargo-contract` version 6.0 on.
 To install it, run
 
 ```bash
-cargo install cargo-contract --locked --version ^6
+$ cargo install cargo-contract --locked --version ^6
 ```
 
 :::
@@ -70,7 +70,7 @@ on Apple Silicon machines. To overcome the issue enable _Rosetta for x86/amd64 e
 in _Settings_ → _Features in development_ tab in Docker Desktop App.
 :::
 
-## Verifying contract
+## Verifying contracts
 
 Similar to Etherscan, you want to ensure that the given contract bundle
 is indeed a copy of some well-known contract code.

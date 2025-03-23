@@ -13,7 +13,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Run the following command in your `flipper` directory to compile your smart contract:
 
 ```bash
-cargo contract build
+$ cargo contract build
 ```
 
 This command will build the following for your contract: 
@@ -123,7 +123,7 @@ For contracts that are supposed to run in production you should always build the
 contract with `--release`:
 
 ```bash
-cargo contract build --release
+$ cargo contract build --release
 ```
 
 This will ensure that nothing unnecessary is compiled into the binary blob, making

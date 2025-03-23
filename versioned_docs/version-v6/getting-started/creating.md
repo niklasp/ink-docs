@@ -27,7 +27,7 @@ Use the ink! CLI to generate an initial smart contract with some scaffolding cod
 Make sure you are in your working directory, and then run:
 
 ```bash
-cargo contract new flipper
+$ cargo contract new flipper
 ```
 
 This command will create a new project folder named `flipper` with this content:
@@ -52,7 +52,7 @@ At the bottom of the `lib.rs` you'll see some simple test cases which verify the
 We can quickly test this code is functioning as expected:
 
 ```bash
-cargo test
+$ cargo test
 ```
 
 To which you should see a successful test completion:

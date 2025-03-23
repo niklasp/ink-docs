@@ -246,7 +246,7 @@ and Solidity ABI.
 We added a new subcommand:
 
 ```bash
-cargo contract build ---metadata <ink|solidity>
+$ cargo contract build ---metadata <ink|solidity>
 ```
 
 Please see [#1930](https://github.com/use-ink/cargo-contract/pull/1930) for more information.
