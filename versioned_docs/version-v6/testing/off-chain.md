@@ -6,7 +6,7 @@ slug: /basics/contract-testing/off-chain
 
 ![Testing1 Title Picture](/img/title/testing1.svg)
 
-## Unit Tests
+# Unit Tests
 
 Testing contracts off-chain is done by `cargo test` and users can simply use the standard Rust
 routines of creating unit test modules within the ink! project:
