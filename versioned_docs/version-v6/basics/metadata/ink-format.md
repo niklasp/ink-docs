@@ -8,14 +8,9 @@ slug: /basics/metadata/ink
 
 # ink! Metadata
 
-The ink! metadata is used to describe a contract in a language agnostic way. It is
-intended to be used by third party tools (e.g. UIs, block explorers) in order to correctly
-call contract functions and interpret events.
-
 The ink! metadata is generated when a contract is built using `cargo-contract`, e.g
 `cargo contract build`.
-
-The metadata can be found in your contract's target directory under the name
+It can be found in your contract's target directory under the name
 `<contract-name>.json`.
 
 :::note
