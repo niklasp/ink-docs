@@ -4,6 +4,8 @@ slug: /getting-started/running-substrate
 hide_title: true
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl'
+
 ![Run an ink! node](/img/title/cargo-contract.svg)
 
 # Run a local node
@@ -30,10 +32,10 @@ $ ink-node
 **Note:** `ink-node` uses the `--dev` flag by default. 
 You may need to specify the `--dev` flag when you want to run a development chain with another binary (e.g using the Substrate Node Template).
 
-<img src="/img/ink-node.png" className="titlePic titleSpace" title="An image of the terminal starting a Substrate node" />
+<img src={useBaseUrl('/img/ink-node.png')} className="titlePic titleSpace" title="Screenshot of terminal starting a local node" />
 
-You can interact with your node using [the Contracts UI](https://contracts-ui.substrate.io).
-Once you have the webpage open, you have to configure the UI to connect to the locally running node:
+You can interact with your node using `cargo-contract` or [the Contracts UI](https://contracts-ui.substrate.io).
+If you use the Contracts UI, you have to configure it to connect to the locally running node:
 
 - Click on the dropdown selector at the top left corner.
 - Choose "Local Node".

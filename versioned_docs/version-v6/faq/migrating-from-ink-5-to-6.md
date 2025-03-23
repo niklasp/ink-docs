@@ -113,7 +113,7 @@ The relevant PR is [#2313](https://github.com/use-ink/ink/pull/2313).
 
 From ink! 6.0 on only these attributes are allowed in `#[cfg(…)]`: - `test` - `feature` (without `std`) - `any` - `not` - `all`
 
-### Metadata
+### Metadata Changes
 
 The field `source.wasm` was renamed to `source.contract_binary`.
 
@@ -211,6 +211,14 @@ We have implemented barebones support for this tracing API in the 6.0.0-alpha
 versions of ink! + `cargo-contract`. But it's really barebones and should
 certainly be improved before a production release.
 
+## Removed Events
+In [#7164](https://github.com/paritytech/polkadot-sdk/pull/7164), Parity removed
+most smart-contract-specific events: `Called`, `ContractCodeUpdated, CodeStored`,
+`CodeRemoved`, `Terminated`, `Instantiated`, `DelegateCalled`,
+`StorageDepositTransferredAndHeld`, `StorageDepositTransferredAndReleased`.
+
+The `ContractEmitted` event (for events a contract emits) is still available.
+
 ## Interesting New Features
 
 ### Cross-contract calling Solidity contracts
@@ -233,3 +241,12 @@ An error about a missing trait implementation for this type will be thrown.
 
 Please note that your contract sizes will get larger if you support both the ink!
 and Solidity ABI.
+
+### Generate Solidity metadata for an ink! contract
+We added a new subcommand:
+
+```bash
+cargo contract build ---metadata <ink|solidity>
+```
+
+Please see [#1930](https://github.com/use-ink/cargo-contract/pull/1930) for more information.
