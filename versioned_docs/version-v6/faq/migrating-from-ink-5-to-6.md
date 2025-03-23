@@ -1,5 +1,5 @@
 ---
-title: Migrate from ink! v5 to v6
+title: "Migration: ink! v5 → v6"
 slug: /faq/migrating-from-ink-5-to-6
 ---
 

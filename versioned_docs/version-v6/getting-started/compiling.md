@@ -61,7 +61,7 @@ Let's take a look at the structure of the `flipper.json`:
   },
   "storage": {...},
   "types": [...],
-  "version": "4"
+  "version": "6"
 }
 ```
 

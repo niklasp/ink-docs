@@ -109,7 +109,7 @@ It can _optionally_ include the following keys:
 ```json
 "contract": {
   "name": "flipper",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "authors": [
     "Use Ink <ink@use.ink>"
   ]
@@ -342,15 +342,8 @@ This indicates the version of the ABI format the generated metadata conforms to.
 distinct from any concept of Rust's crate versioning.
 
 ```json
-"version": "4"
+"version": "6"
 ```
-
-:::tip ink! 3.x Compatibility Note
-
-In version 3 of the ink! metadata the version was specified as a key which wrapped the
-ABI (e.g `"V3": { ... }`). This is no longer the case with version 4.
-
-:::
 
 ### `user`
 This is an _optional_ field used to add user-defined metadata. Some examples of things
