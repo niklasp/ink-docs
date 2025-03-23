@@ -4,6 +4,13 @@ hide_title: true
 slug: /background/why-riscv-and-polkavm-for-smart-contracts
 ---
 
+<head>
+    <meta name="description" content="Why RISC-V and PolkaVM for Smart Contracts?" />
+    <meta name="keywords" content="Polkadot, PolkaVM, RISC-V, RISCV, Smart Contracts" />
+    <meta property="og:title" content="Why RISC-V and PolkaVM for Smart Contracts?" />
+    <meta property="og:description" content="Discover available bounties and contribute to the ink! ecosystem." />
+</head>
+
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img src={useBaseUrl('/img/title/polkadot-riscv.svg')} title="RISC-V" className="titlePic"  />
