@@ -12,12 +12,12 @@ A full overview [is found here](https://docs.rs/ink_env/6.0.0/ink_env/#functions
 
 In an `#[ink(constructor)]`  use `Self::env()` to access those,
 in an `#[ink(message)]` use `self.env()`.
-So e.g. `Self::env().caller()` or `self.env().caller()`.
+So `Self::env().caller()` or `self.env().caller()`.
 
 Some handy functions include:
 
 * [`caller()`](https://docs.rs/ink_env/6.0.0/ink_env/fn.caller.html): Returns the address of the caller of the executed contract.
-* [`account_id()`](https://docs.rs/ink_env/6.0.0/ink_env/fn.account_id.html): Returns the account ID of the executed contract.
+* [`address()`](https://docs.rs/ink_env/6.0.0/ink_env/fn.address.html): Returns the address of the executed contract.
 * [`balance()`](https://docs.rs/ink_env/6.0.0/ink_env/fn.balance.html): Returns the balance of the executed contract.
 * [`block_number()`](https://docs.rs/ink_env/6.0.0/ink_env/fn.block_number.html): Returns the current block number.
 * [`emit_event(…)`](https://docs.rs/ink_env/6.0.0/ink_env/fn.emit_event.html): Emits an event with the given event data.
