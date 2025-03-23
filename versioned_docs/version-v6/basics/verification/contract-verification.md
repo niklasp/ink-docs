@@ -111,7 +111,9 @@ make sure you are executing the build in the parent directory in order to mount 
 of all contracts to be visible. Specify a relative manifest path to the root contract:
 
 ```bash
-cargo contract build --verifiable --manifest-path ink-project-a/Cargo.toml
+$ cargo contract build 
+    --verifiable
+    --manifest-path ink-project-a/Cargo.toml
 ```
 :::
 

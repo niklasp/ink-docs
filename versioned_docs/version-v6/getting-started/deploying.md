@@ -32,7 +32,11 @@ and waste space on the blockchain.
 
 ## Using the Contracts UI
 
+:::caution
+This section on the Contracts UI has not yet been updated to ink! v6.
+
 TODO @peterwht Please review this section.
+:::
 
 ### 1. Upload Contract Code
 
