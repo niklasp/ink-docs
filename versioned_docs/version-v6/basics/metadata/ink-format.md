@@ -1,7 +1,7 @@
 ---
-title: Metadata
+title: ink! Format
 hide_title: true
-slug: /basics/metadata
+slug: /basics/metadata/ink
 ---
 
 ![Metadata Title Picture](/img/title/metadata-revive.svg)
