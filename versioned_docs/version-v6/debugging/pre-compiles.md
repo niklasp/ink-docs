@@ -8,7 +8,7 @@ hide_title: true
 
 # Pre-compile
 
-We don't have any examples for this functionality yet. 
+We don't have any examples for debugging with pre-compiles yet. 
 Our intention add one here, once the pre-compile API in `pallet-revive`
 is clearer.
 
