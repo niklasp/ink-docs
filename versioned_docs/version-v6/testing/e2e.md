@@ -65,11 +65,12 @@ You can run the above test by going to the `flipper` folder in
 
 Before you can run the test, you have to install a Polkadot SDK
 node with `pallet-revive`. By default, e2e tests require that you install [`ink-node`](https://github.com/use-ink/ink-node). You do not need to run it in the background since the node is started for each test independently.
-To install the latest version:
-
-```bash
-$ cargo install ink-node --git https://github.com/use-ink/ink-node.git
-```
+The easiest way is to 
+[download a binary from our releases page](https://github.com/use-ink/ink-node/releases)
+(Linux and Mac).
+Alternatively, you can build the node by yourself.
+The build instructions and pre-requisites can be found
+[here](https://github.com/use-ink/ink-node?tab=readme-ov-file#build-locally).
 
 If you want to run any other node with `pallet-revive` you need to change `CONTRACTS_NODE` environment variable:
 
