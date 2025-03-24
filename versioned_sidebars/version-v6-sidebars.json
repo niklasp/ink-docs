@@ -61,7 +61,14 @@
       }
     ],
     "Debugging": [
-      "debugging/overview"
+      "debugging/overview",
+      "debugging/events",
+      "debugging/return_value",
+      "debugging/tracing",
+      "debugging/sandbox",
+      "debugging/decoding",
+      "debugging/replays",
+      "debugging/pre-compiles"
     ],
     "Macros & Attributes": [
       "macros-attributes/overview",
