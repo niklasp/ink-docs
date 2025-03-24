@@ -41,7 +41,7 @@
       "basics/xcm",
       "basics/contract-verification"
     ],
-    "Testing & Debugging": [
+    "Testing": [
       "testing/overview",
       "testing/unit-integration",
       "testing/e2e",
@@ -58,8 +58,10 @@
           "type": "doc",
           "id": "testing/testnet/overview"
         }
-      },
-      "testing/debugging"
+      }
+    ],
+    "Debugging": [
+      "debugging/overview"
     ],
     "Macros & Attributes": [
       "macros-attributes/overview",

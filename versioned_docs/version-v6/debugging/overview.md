@@ -1,12 +1,12 @@
 ---
-title: Debugging
-slug: /basics/contract-debugging
+title: Overview
+slug: /contract-debugging/
 hide_title: true
 ---
 
 ![Magnifying Glass Title Picture](/img/title/magnifying-glass.svg)
 
-# Contract Debugging
+# Overview
 
 On a high-level there are two workflows for debugging your contract:
 
