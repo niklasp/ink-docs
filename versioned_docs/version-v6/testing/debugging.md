@@ -8,78 +8,86 @@ hide_title: true
 
 # Contract Debugging
 
-This page lays out different options for debugging your contract.
+On a high-level there are two workflows for debugging your contract:
+
+* You can write tests using one of the mechanisms described on the
+  [Contract Testing](./overview.md) page.
+* You can interact with your contract via a UI or command-line. The  
+  workflow is described on the [Call Your Contract](../getting-started/calling.md) page.
+
+In each of those two options you have access to more detailed debugging
+information. We explain how to utilize this info on this page.
 
 ## Emit debugging events
 
-When building a contract via `cargo contract build` (notice the missing `--release`!),
-the feature `ink/ink-debug` is enabled.
-In your contract you can emit debugging events based on this:
+When building a contract without the `--release` flag,
+`cargo-contract` automatically enables the feature `ink/ink-debug`.
+
+You can utilize this to emit debugging events in your contract:
 
 ```rust
 #[cfg(feature = "ink-debug")]
-self.env().emit(…);
+use ink::prelude::string::String;
+
+#[cfg(feature = "ink-debug")]
+#[ink::event]
+pub struct DebugEvent {
+    message: String,
+}
+
+#[ink::message]
+fn insert(&mut self) {
+    #[cfg(feature = "ink-debug")]
+    self.env().emit(DebugEvent {
+        message: format!("received {:?}", self.env().transferred_value());
+    });
+    // …
+}
 ```
+
+This event will be shown when you call a contract. You can also access it in E2E tests.
+
+:::note
+TODO add example code
+:::
 
 ## Return an error message
 Return a specific error message via `ink::return_value(REVERT, err);` 
 and do a dry-run of the contract call. The result of the dry-run will 
 then present this data.
 
+```rust
+#[ink::message]
+fn insert(&self) {
+    #[cfg(feature = "ink-debug")]
+    ink::return_value(
+        ink::env::ReturnFlags::REVERT,
+        format!("received {:?}", self.env().transferred_value()).as_bytes();
+    );
+}
+```
+
+:::note
+TODO add example code for E2E test + `cargo-contract`
+:::
+
+:::note
+This output is not printed if you execute a transaction on-chain!
+The transaction will just fail with `ExtrinsicFailed`.
+
+It is only printed for RPC calls, so for dry-runs.
+In the E2E tests you have to execute `.dry_run()` to get
+this information.
+:::
+
+
 ## Tracing APIs
 The `pallet-revive` has implemented a tracing API. 
 This is what the Ethereum-debugging tools use when interacting with `pallet-revive`.
 
 ## Sandbox API
-Use the sandbox API #[ink_e2e::test(backend(runtime_only))]. Debugging here could be done via DRink!.
-
-There are three ways to debug your ink! contract currently:
-
-* You can write tests using one of the mechanisms described on the
-  [Contract Testing](./overview.md) page.
-* You can interact with your contract via a UI or command-line. This is
-  described on the [Call Your Contract](../getting-started/calling.md) page.
-* You can print debug statements in your contract. Those will appear
-  on the Polkadot SDK node's `stdout`. This is described on this page.
-
-## How do I print to the terminal console from ink!?
-
-You can use those two macros:
-
-* [`ink::env::debug_println!`](https://docs.rs/ink_env/6.0.0/ink_env/macro.debug_println.html)
-* [`ink::env::debug_print!`](https://docs.rs/ink_env/6.0.0/ink_env/macro.debug_print.html)
-
-There are things you could do to enable debug messages on the client console:
-
-1. __Enable the feature `ink-debug` for the `ink_env` crate.__<br/>
-   `cargo-contract` does this automatically for you (for versions `>= 0.13.0`), except if
-   you compile a contract in `--release` mode.
-
-### Example
-
-The following code depicts how to print debug statements
-from a message or constructor.
-
-```rust
-#[ink(constructor)]
-fn new() -> Self {
-    ink::env::debug_println!("created new instance at {}", Self::env().block_number());
-    Self { }
-}
-
-#[ink(message)]
-fn print(&self) {
-   let caller = self.env().caller();
-   let message = ink_prelude::format!("got a call from {:?}", caller);
-   ink::env::debug_println!(&message);
-}
-```
-
-:::note
-Debug output is not printed for transactions!
-
-It is only printed for RPC calls or off-chain tests.
-:::
+Use the sandbox API `#[ink_e2e::test(backend(runtime_only))]`. Debugging here 
+could be done via [DRink!](https://github.com/use-ink/drink).
 
 ## Pre-compile
 - Implement a pre-compile that can be called from a contract to output log info (they said Hardhat does something like this).
