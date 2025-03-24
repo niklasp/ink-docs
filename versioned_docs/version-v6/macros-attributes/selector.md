@@ -6,9 +6,17 @@ hide_title: true
 
 ![Text/selector Title Picture](/img/title/text/selector.svg)
 
+:::caution
+This section has not yet been updated to ink! v6.
+
+TODO @davidsemakula Please review this page in light of our ABI updates. 
+:::
+
+### 1. Upload Contract Code
+
 Applicable to ink! messages and ink! constructors.
 
-By default ink! creates a selector for each message and constructor.
+By default, ink! creates a selector for each message and constructor.
 This is necessary since the contract is compiled to a binary blob and functions are invoked by invoking the
 selector, which identifies a method ‒ method names are no longer available in these underlying layers.
 
