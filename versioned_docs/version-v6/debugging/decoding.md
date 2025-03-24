@@ -8,7 +8,9 @@ hide_title: true
 
 # Decode Data Payload
 
-You can use a block explorer or an app like PolkadotJs to retrieve the data payload of a contract transaction, and then use [cargo-contract](https://github.com/use-ink/cargo-contract) to decode it.
+You can use a block explorer (or an app like Polkadot.js) to retrieve the data
+payload of a contract transaction. [cargo-contract](https://github.com/use-ink/cargo-contract) supports decoding
+this data.
 
 ```bash
 # From your contract directory

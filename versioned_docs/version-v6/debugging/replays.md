@@ -6,16 +6,17 @@ hide_title: true
 
 ![Magnifying Glass Title Picture](/img/title/magnifying-glass.svg)
 
-# Replays
-On this page we'll examine possibilities of replaying on-chain action.
-
-## Replay and Debug a Block
-
 :::caution
 This section has not yet been updated to ink! v6.
 
 TODO Verify if this still works.
 :::
+
+
+# Replays
+On this page we'll examine possibilities of replaying on-chain action.
+
+## Replay and Debug a Block
 
 To replay a transaction, you can use [Chopstick](https://github.com/AcalaNetwork/chopsticks) to create a local fork of the chain and replay the block with trace-level logging.
 
