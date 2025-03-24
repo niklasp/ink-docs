@@ -21,6 +21,10 @@ A selector must be a `u32` decodable integer. For example
 
 An exception is the fallback selector `_`, allowing contract calls not matching any of the other message selectors to be dispatched to a fallback message. Fallback messages can be `payable`.
 
+:::info
+The term wildcard selector is just a synonym for fallback selector.
+:::
+
 ## Examples
 
 ```rust

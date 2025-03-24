@@ -43,9 +43,10 @@
     ],
     "Testing & Debugging": [
       "testing/overview",
-      "testing/off-chain",
-      "testing/drink",
+      "testing/debugging",
+      "testing/unit-integration",
       "testing/e2e",
+      "testing/drink",
       "testing/testing-with-live-state",
       {
         "type": "category",

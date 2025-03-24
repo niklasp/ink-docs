@@ -1,7 +1,7 @@
 ---
-title: DRink!
+title: "E2E: Sandbox"
 hide_title: true
-slug: /basics/contract-testing/drink
+slug: /contract-testing/drink
 ---
 
 ![Drink Title Picture](/img/title/drink.svg)

@@ -4,6 +4,8 @@ slug: /datastructures/storage-layout
 hide_title: true
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 ![Storage Title Picture](/img/title/storage.svg)
 
 # Storage Layout
@@ -19,7 +21,7 @@ The following schema depicts the storage which is exposed
 to ink! by the [`pallet-revive`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/revive/):
 
 <div class="schema">
-    <img src="/img/kv.svg" alt="Storage Organization: Layout" />
+    <img src={useBaseUrl('/img/kv-revive.svg')} alt="Storage Organization: Layout" />
 </div>
 
 Storage data is always encoded with the
@@ -47,6 +49,10 @@ in the contract storage but provide messages that do not need to read and write 
 with that `Vec`, regardless whether they access it or not. This results in extra gas costs.
 To solve this problem we need to turn our storage into a non-packed layout somehow.
 
+<div class="schema">
+    <img src={useBaseUrl('/img/packed-revive.svg')} alt="Storage Organization: Packed" />
+</div>
+
 :::caution
 
 If any type exhibiting `Packed` layout gets large enough (an ever-growing `Vec` might be
@@ -68,7 +74,7 @@ struct in which that field appears also
 non-`Packed`, preventing it from being eagerly loaded during arbitrary storage operations:
 
 <div class="schema">
-    <img src="/img/storage-layout.svg" alt="Storage Organization: Layout with a Lazy field" />
+    <img src={useBaseUrl('/img/storage-layout-revive.svg')} alt="Storage Organization: Layout with a Lazy field" />
 </div>
 
 Note that in above illustration, the key of `0x12345678` just serves as an example; we'll

@@ -1,7 +1,7 @@
 ---
-title: End-to-End (E2E) Tests
+title: "E2E: Node Process"
 hide_title: true
-slug: /basics/contract-testing/end-to-end-e2e-testing
+slug: /contract-testing/end-to-end-e2e-testing
 ---
 
 ![Testing1 Title Picture](/img/title/testing1.svg)
@@ -67,17 +67,18 @@ Before you can run the test, you have to install a Polkadot SDK
 node with `pallet-revive`. By default, e2e tests require that you install [`ink-node`](https://github.com/use-ink/ink-node). You do not need to run it in the background since the node is started for each test independently.
 To install the latest version:
 
-```sh
-cargo install ink-node --git https://github.com/use-ink/ink-node.git
+```bash
+$ cargo install ink-node --git https://github.com/use-ink/ink-node.git
 ```
+
 If you want to run any other node with `pallet-revive` you need to change `CONTRACTS_NODE` environment variable:
 
-```sh
-export CONTRACTS_NODE="YOUR_CONTRACTS_NODE_PATH"
+```bash
+$ export CONTRACTS_NODE="YOUR_CONTRACTS_NODE_PATH"
 ```
 
 And finally execute the following command to start e2e test execution.
 
-```sh
-cargo test --features e2e-tests
+```bash
+$ cargo test --features e2e-tests
 ```
