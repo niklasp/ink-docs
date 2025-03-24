@@ -16,14 +16,14 @@ of some of its implications and limitations.
 ## Storage Organization
 
 The following schema depicts the storage which is exposed
-to ink! by the contracts pallet:
+to ink! by the [`pallet-revive`](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/revive/):
 
 <div class="schema">
     <img src="/img/kv.svg" alt="Storage Organization: Layout" />
 </div>
 
 Storage data is always encoded with the
-[`SCALE`](https://docs.substrate.io/reference/scale-codec/) codec.
+[`SCALE`](https://docs.polkadot.com/polkadot-protocol/basics/data-encoding/#scale-codec-libraries) codec.
 The storage API operates by storing and loading entries into and from a single storage
 cells, where each storage cell is accessed under its own dedicated storage key. To some
 extent, the storage API works similar to a traditional key-value database.

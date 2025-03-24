@@ -146,7 +146,7 @@ information.
 
 Besides the publicly exposed crate functions, we've introduced a new subcommand
 `cargo contract account` that allows resolving the `H160` contract address to the
-Substrate `AccountId` which it is mapped to.
+Polkadot SDK `AccountId` which it is mapped to.
 
 #### Contract Hash: `H256`
 For a contract's hash value, `pallet-revive` uses a fixed `H256`, Previously,
