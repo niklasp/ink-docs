@@ -211,6 +211,9 @@ We have implemented barebones support for this tracing API in the 6.0.0-alpha
 versions of ink! + `cargo-contract`. But it's really barebones and should
 certainly be improved before a production release.
 
+We've updated [the Debugging chapter](../testing/debugging.md) of this documentation
+to reflect the new workflow.
+
 ## Removed Events
 In [#7164](https://github.com/paritytech/polkadot-sdk/pull/7164), Parity removed
 most smart-contract-specific events: `Called`, `ContractCodeUpdated, CodeStored`,

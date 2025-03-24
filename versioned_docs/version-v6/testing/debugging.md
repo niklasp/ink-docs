@@ -8,6 +8,31 @@ hide_title: true
 
 # Contract Debugging
 
+This page lays out different options for debugging your contract.
+
+## Emit debugging events
+
+When building a contract via `cargo contract build` (notice the missing `--release`!),
+the feature `ink/ink-debug` is enabled.
+In your contract you can emit debugging events based on this:
+
+```rust
+#[cfg(feature = "ink-debug")]
+self.env().emit(…);
+```
+
+## Return an error message
+Return a specific error message via `ink::return_value(REVERT, err);` 
+and do a dry-run of the contract call. The result of the dry-run will 
+then present this data.
+
+## Tracing APIs
+The `pallet-revive` has implemented a tracing API. 
+This is what the Ethereum-debugging tools use when interacting with `pallet-revive`.
+
+## Sandbox API
+Use the sandbox API #[ink_e2e::test(backend(runtime_only))]. Debugging here could be done via DRink!.
+
 There are three ways to debug your ink! contract currently:
 
 * You can write tests using one of the mechanisms described on the
@@ -17,7 +42,7 @@ There are three ways to debug your ink! contract currently:
 * You can print debug statements in your contract. Those will appear
   on the Polkadot SDK node's `stdout`. This is described on this page.
 
-### How do I print to the terminal console from ink!?
+## How do I print to the terminal console from ink!?
 
 You can use those two macros:
 
@@ -30,22 +55,7 @@ There are things you could do to enable debug messages on the client console:
    `cargo-contract` does this automatically for you (for versions `>= 0.13.0`), except if
    you compile a contract in `--release` mode.
 
-1. __Set the log level of your node to `runtime::contracts=debug`.__<br/>
-   For example, to have only errors and debug output show up for the `ink-node`:
-
-  ```
-  ink-node -lerror,runtime::contracts=debug
-  ```
-
-1. __Set the log level of your node to `runtime::contracts::strace` to trace host function calls.__<br/>
-   These function calls logs will also be displayed in the `Debug message` panel of [Contracts UI](https://github.com/use-ink/contracts-ui).
-   For example, to view these traces in addition to the logs described above:
-
-  ```
-  ink-node -lerror,runtime::contracts=debug,runtime::contracts::strace=trace
-  ```
-
-## Example
+### Example
 
 The following code depicts how to print debug statements
 from a message or constructor.
@@ -71,7 +81,10 @@ Debug output is not printed for transactions!
 It is only printed for RPC calls or off-chain tests.
 :::
 
-# Decode Data Payload
+## Pre-compile
+- Implement a pre-compile that can be called from a contract to output log info (they said Hardhat does something like this).
+
+## Decode Data Payload
 
 You can use a block explorer or an app like PolkadotJs to retrieve the data payload of a contract transaction, and then use [cargo-contract](https://github.com/use-ink/cargo-contract) to decode it.
 
@@ -88,7 +101,13 @@ Decoded data: inc_by { n: 1 }
 
 If the contract was called through a cross-contract interaction, the payload will not be available in the transaction. In such cases, you can use the approach described in the next section to access it.
 
-# Replay and Debug a Block
+## Replay and Debug a Block
+
+:::caution
+This section has not yet been updated to ink! v6.
+
+TODO Verify if this still works.
+:::
 
 To replay a transaction, you can use [Chopstick](https://github.com/AcalaNetwork/chopsticks) to create a local fork of the chain and replay the block with trace-level logging.
 
@@ -126,7 +145,13 @@ This command will output the following:
 Decoded data: inc_by { n: 1 }
 ```
 
-# Fork Node and Replay Transactions
+## Fork Node and Replay Transactions
+
+:::caution
+This section has not yet been updated to ink! v6.
+
+TODO Verify if this still works.
+:::
 
 You can also use [Chopstick](https://github.com/AcalaNetwork/chopsticks) to start a local fork of your chain.
 

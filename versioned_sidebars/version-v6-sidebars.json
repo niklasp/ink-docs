@@ -43,7 +43,6 @@
     ],
     "Testing & Debugging": [
       "testing/overview",
-      "testing/debugging",
       "testing/unit-integration",
       "testing/e2e",
       "testing/drink",
@@ -59,7 +58,8 @@
           "type": "doc",
           "id": "testing/testnet/overview"
         }
-      }
+      },
+      "testing/debugging"
     ],
     "Macros & Attributes": [
       "macros-attributes/overview",
