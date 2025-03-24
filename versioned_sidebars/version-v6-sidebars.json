@@ -45,7 +45,7 @@
       "testing/overview",
       "testing/unit-integration",
       "testing/e2e",
-      "testing/drink",
+      "testing/sandbox",
       "testing/testing-with-live-state",
       {
         "type": "category",
