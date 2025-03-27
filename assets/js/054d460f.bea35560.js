@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkink_docs=self.webpackChunkink_docs||[]).push([[6574],{34622:(s,c,e)=>{e.r(c),e.d(c,{default:()=>d});e(96540);var n=e(56347),t=e(40797),o=e(29030),u=e(74848);function d(){const s=(0,o.Ay)("/docs/v5"),{siteConfig:{customFields:c}}=(0,t.A)();return(0,u.jsx)(n.rd,{to:s})}}}]);
