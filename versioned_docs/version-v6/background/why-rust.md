@@ -4,6 +4,13 @@ hide_title: true
 slug: /background/why-rust-for-smart-contracts
 ---
 
+<head>
+    <meta name="description" content=""Explanation why Rust is a great language for smart contracts." />
+    <meta name="keywords" content="ink!, Rust, Smart Contracts" />
+    <meta property="og:title" content="Why Rust for Smart Contracts?" />
+    <meta property="og:description" content="Explanation why Rust is a great language for smart contracts." />
+</head>
+
 ![Rust Title Picture](/img/title/rust.svg)
 
 # Why Rust for Smart Contracts?

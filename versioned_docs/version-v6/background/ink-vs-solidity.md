@@ -6,7 +6,11 @@ slug: /background/ink-vs-solidity
 
 ![Solidity Title Picture](/img/title/solidity.svg)
 
-TODO re-read in particular because of our migration to RISC-V
+:::caution
+This page has not been updated for ink! v6 yet.
+
+TODO @peterwht Please re-read this page.
+:::
 
 # ink! vs. Solidity
 

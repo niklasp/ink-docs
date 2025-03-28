@@ -7,7 +7,9 @@ slug: /contract-testing/drink
 ![Drink Title Picture](/img/title/drink.svg)
 
 :::note
-The DRink! specific information should be moved to either
+TODO 
+
+The DRink! specific information from this page should be moved to either
 https://github.com/use-ink/drink or the ink! website (as a tutorial).
 
 Below should just be what is inside ink!. That's the `ink_sandbox` that can
@@ -16,8 +18,6 @@ be used without `DRink!`:
 ```rust
 #[ink_e2e::test(backend(runtime_only))]
 ```
-
-todo
 :::
 
 # DRink!

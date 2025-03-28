@@ -8,9 +8,20 @@ hide_title: true
 
 # Sandbox API
 
-Use the sandbox API `#[ink_e2e::test(backend(runtime_only))]` together
-with the [DRink!](https://github.com/use-ink/drink) tool.
+In the chapter on Testing Strategies, we've explained that ink! supports
+two means of End-to-End testing:
+
+* `#[ink_e2e::test]`:
+  The End-to-End tests spawn a local node process in the backend
+  and submit transactions against it, returning the output to you.
+
+* `#[ink_e2e::test(backend(runtime_only))]` 
+  With these settings, the End-to-End tests will be executed in
+  a sandbox. The sandbox contains the `pallet-revive`, but anything
+  that the node would do is mocked and can be influenced (block numbers, etc.).
+
+We'll examine the latter on this page.
 
 :::note
-todo
+TODO
 :::
