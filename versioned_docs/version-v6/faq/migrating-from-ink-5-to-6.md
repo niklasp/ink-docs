@@ -236,7 +236,7 @@ This line instructs the Rust compiler to not link the Rust
 standard library with your contract. 
 If you want to know about why:
 we have an entry 
-["Why is Rust's standard library (stdlib) not available in ink!?"](./faq.md#why-no_std)
+["Why is Rust's standard library (stdlib) not available in ink!?"](./faq.md)
 in our FAQ.
 
 With ink! v6, an additional crate-level attribute needs to be set:
