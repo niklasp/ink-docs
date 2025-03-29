@@ -65,7 +65,7 @@ currently only supports a `DefaultEnvironment`.
 See [here](../basics/environment.md) for an explanation of what an environment is.
 :::
 
-## Example
+### Example
 
 ```rust
 #[cfg(test)]
@@ -85,7 +85,7 @@ mod tests {
 }
 ```
 
-## How do you find out if your test requires the off-chain environment?
+## How do you find out if a test requires the off-chain environment?
 
 If the test recursively uses or invokes methods that call a function defined
 in `self.env()` or `Self::env()`.
