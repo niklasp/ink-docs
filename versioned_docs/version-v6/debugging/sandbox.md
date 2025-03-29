@@ -22,9 +22,4 @@ two means of End-to-End testing:
 
 You can utilize the DRink! library that is described on
 [Testing Strategies](../testing/sandbox.md) to influence the state of the mocked 
-sandbox. This is very useful for debugging and we invite you to read the linked page.
-
-## Debug interactions with `pallet-revive`
-
-If you ever want to debug the interactions your contract has with `pallet-revive`, 
-the `ink_sandbox` is an ideal tool.
+sandbox. This is very useful for debugging, and we invite you to read the linked page.
