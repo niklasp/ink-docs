@@ -249,6 +249,15 @@ It instructs the compiler not to use the default `fn main() {}` function as the
 entry point for your smart contract. This is needed because PolkaVM uses a different
 entry point (the `deploy` function).
 
+### `substrate-contracts-node` can no longer be used
+The `substrate-contracts-node` is still maintained by Parity for ink! v5 and
+`pallet-contracts`, but it does not support `pallet-revive`.
+
+We've set up a new project in its place: [`ink-node`](https://github.com/use-ink/ink-node).
+As before, it functions as a simple local development node.
+It contains `pallet-revive` in a default configuration.
+You can find binary releases of the node [here](https://github.com/use-ink/ink-node/releases).
+
 ### Solang can no longer be used
 It was previously possible to interact with Solidity contracts compiled via the 
 Solang compiler. As we have moved from WebAssembly/`pallet-contracts` to 
