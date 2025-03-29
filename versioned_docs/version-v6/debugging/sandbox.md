@@ -8,7 +8,7 @@ hide_title: true
 
 # Sandbox API
 
-In the chapter on Testing Strategies, we've explained that ink! supports
+In the chapter on [Testing Strategies](../testing/sandbox.md), we explain that ink! supports
 two means of End-to-End testing:
 
 * `#[ink_e2e::test]`:
@@ -20,8 +20,11 @@ two means of End-to-End testing:
   a sandbox. The sandbox contains the `pallet-revive`, but anything
   that the node would do is mocked and can be influenced (block numbers, etc.).
 
-We'll examine the latter on this page.
+You can utilize the DRink! library that is described on
+[Testing Strategies](../testing/sandbox.md) to influence the state of the mocked 
+sandbox. This is very useful for debugging and we invite you to read the linked page.
 
-:::note
-TODO
-:::
+## Debug interactions with `pallet-revive`
+
+If you ever want to debug the interactions your contract has with `pallet-revive`, 
+the `ink_sandbox` is an ideal tool.
